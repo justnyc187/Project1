@@ -1,0 +1,28 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "sneaker inventory tracker",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/vanessarayyan/project1.git"
+  },
+  "keywords": [
+    "sneaker",
+    "inventory",
+    "tracker"
+  ],
+  "author": "Vanessa and Justin",
+  "license": "ISC"
+}
