@@ -36,6 +36,34 @@ app.use("/", controllers.sneakers);
 // HOME routes
 
 
+
+/*
+    <div>
+        <form action="/Sneaker" method="POST">
+        
+        
+    
+    
+            <input type="text" name="name" placeholder="Style">
+            <input type="text" name="size" placeholder="Size">
+            <input type="text" name="condition" placeholder="Condition">
+    
+    
+    
+    
+            <input type="submit" value="Add Stock">
+    
+        </form>
+    </div>
+
+    */
+
+
+
+
+
+
+
 // *** SERVER LISTENER *** \\
 app.listen(PORT, function(){
     console.log(`SNEAKER APP is live at http:/localhost:${PORT}`);

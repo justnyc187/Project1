@@ -20,12 +20,12 @@ const db = require("../models");
  */
 
 router.get("/", function (req, res){
-    res.render("sneakers/home");
+    res.render("./home");
 
 });
 
 
-router.get("/Sneakers", function(req, res){
+router.get("/inventory", function(req, res){
     db.Sneaker.find({}, function(err, allSneakers){
         if (err) return res.send(err);
         const context = {sneakers: allSneakers};
@@ -33,6 +33,12 @@ router.get("/Sneakers", function(req, res){
     });
 });
 
+
+//ROUTE FOR NEW
+
+router.get("/new", function(req, res){
+    res.render("sneakers/new");
+})
 
 
 module.exports = router;
