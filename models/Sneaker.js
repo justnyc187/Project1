@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+
 // Sneaker schema (Style, Size, Condition, Timestamp - unclear about the timestamp right now, but teri had it in her app so i left it in there for now lol)
 
 const sneakerSchema = new mongoose.Schema ({

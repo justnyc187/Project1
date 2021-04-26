@@ -12,12 +12,12 @@
     <h2>Add Your Inventory</h2>
 <div>
     <button><a href="sneakers/">Inventory</a></button>
-    <button><a href="/Jordan">Profile</a></button>
+    <button><a href="/Jordan">Search Inventory</a></button>
     <button><a href="/">Home</a></h3></button>
     
 </div>
 
-<p>
+<div>
     <form action="/Sneaker" method="POST">
     
     
@@ -31,10 +31,24 @@
 
 
         <input type="submit" value="Add Stock">
-    
-    
+
     </form>
-</p>
+</div>
+<main>
+    <h2> List of Sneakers</h2>
+
+    <% if(!sneakers.length) { %>
+    <p>There are no sneakers in your inventory yet.</p>
+    <% } %>
+    <ul>
+        <% sneakers.forEach(sneaker => { %>
+        <li>
+            <a href="/sneakers/<%= sneaker._id %>"> <%= sneaker.name %></a>
+        </li>
+        <% }) %>
+    </ul>
+</main>
+
 
 </body>
 </html>
