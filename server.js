@@ -3,6 +3,9 @@
 const express = require("express");
 const methodOverride = require("method-override");
 
+
+const db = require("./models");
+
 // *** INTERNAL MODULES *** \\
 const controllers = require("./controllers");
 
@@ -23,14 +26,14 @@ app.use(express.urlencoded({ extended: true}));
 // method override middleware
 app.use(methodOverride("_method"));
 
+// CONTROLLERS ROUTE
+
+app.use("/", controllers.sneakers);
+
 
 // *** ROUTES/CONTROLLERS ** \\
 
 // HOME routes
-
-app.get("/", function(req, res){
-    res.send("WOAT is in Progress!!!!!!!")
-});
 
 
 // *** SERVER LISTENER *** \\
