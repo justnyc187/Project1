@@ -42,7 +42,7 @@ router.get("/new", function(req, res){
 
 // ROUTE for SHOW PAGE BY SNEAKER ID
 
-router.get("/:id", function(req, res){
+router.get("/sneakers/:id", function(req, res){
     db.Sneaker.findById(req.params.id, function(err, foundSneaker){
         if (err) return res.send(err);
 
@@ -58,7 +58,7 @@ router.post("/inventory", function(req, res){
     db.Sneaker.create(req.body, function(err, createdSneaker){
         if (err) return res.send(err);
 
-        return res.redirect("/inventory");
+        return res.redirect("sneakers/inventory");
     });
 });
 

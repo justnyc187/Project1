@@ -17,14 +17,14 @@
 <main>
     <section>
         <h2>Sneaker INFO</h2>
-        <a href="/sneakers/<%= sneaker._id %>/edit">Edit</a>
+        <a href="sneakers/:id<%= Sneaker._id %>/edit">Edit</a>
         <ul>
-            <li>Style: <%= sneaker.style %></li>
-            <li>Size: <%= sneaker.size %></li>
-            <li>Condition: <%= sneaker.condition %></li>
+            <li>Style: <%= Sneaker.style %></li>
+            <li>Size: <%= Sneaker.size %></li>
+            <li>Condition: <%= Sneaker.condition %></li>
         </ul>
     </section>
-    <form action="/sneakers/<%= sneaker._id %>?_method=DELETE" method="POST">
+    <form action="/sneakers/<%= Sneaker._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete"/>
     </form>
 </main>
