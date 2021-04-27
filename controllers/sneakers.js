@@ -74,5 +74,23 @@ router.get("/sneakers/:id/edit", function(req, res){
     });
 });
 
+// PUT ROUTE
+router.put("/sneakers/:id", function(req, res){
+    console.log("PUUUTTTTT ROUTE")
+    db.Sneaker.findByIdAndUpdate(
+        req.params.id,
+        {
+            $set: {
+                ...req.body,
+            },
+        },
+        { new :true },
+        function (err, updatedSneaker){
+            if (err) return res.send(err);
+            return res.redirect(`/sneakers/${updatedSneaker._id}`);
+        }
+    );
+});
+
 
 module.exports = router;
