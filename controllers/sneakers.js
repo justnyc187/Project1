@@ -58,8 +58,21 @@ router.post("/inventory", function(req, res){
     db.Sneaker.create(req.body, function(err, createdSneaker){
         if (err) return res.send(err);
 
-        return res.redirect("sneakers/inventory");
+        return res.redirect("/inventory");
     });
 });
+
+// EDIT route 
+
+router.get("/sneakers/:id/edit", function(req, res){
+    console.log("EDit routeeeeeeeeee");
+    db.Sneaker.findById(req.params.id, function (err, foundSneaker){
+        if (err) res.send(err);
+
+        const context = { Sneaker: foundSneaker };
+        return res.render("sneakers/edit", context);
+    });
+});
+
 
 module.exports = router;
