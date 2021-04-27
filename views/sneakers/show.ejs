@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOAT APP</title>
+</head>
+<body>
+    <div>
+        <button><a href="/new">Add Sneaker</a></button>
+        <button><a href="/search">Search Inventory</a></button>
+        <button><a href="/">Home</a></h3></button>
+        <button><a href="/inventory">Inventory</a></button>
+        
+    </div>
+
+<main>
+    <section>
+        <h2>Sneaker INFO</h2>
+        
+        <ul>
+            <li>Style: <%= Sneaker.style %></li>
+            <li>Size: <%= Sneaker.size %></li>
+            <li>Condition: <%= Sneaker.condition %></li>
+        </ul>
+    </section>
+    <a href="/sneakers/<%= Sneaker._id %>/edit">Edit</a>
+    
+    <form action="/sneakers/<%= Sneaker._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete"/>
+    </form>
+</main>
+
+
+</body>
+</html>

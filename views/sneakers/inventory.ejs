@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOAT APP!!</title>
+</head>
+<body>
+    <h1>WELCOME TO WOAT APP!</h1>
+
+    <div>
+        <button><a href="/new">Add Sneaker</a></button>
+        <button><a href="/Jordan">Search Inventory</a></button>
+        <button><a href="/">Home</a></h3></button>
+        
+    </div>
+
+<main>
+    <h2> List of Sneakers</h2>
+
+    <% if(!sneakers.length) { %>
+    <p>There are no sneakers in your inventory yet.</p>
+    <% } %>
+    <ul>
+        <% sneakers.forEach(sneaker => { %>
+        <li>
+            <a href="/sneakers/<%= sneaker._id %>"> <%= sneaker.style %></a>
+        </li>
+        <% }) %>
+    </ul>
+</main>
+
+
+</body>
+</html>
