@@ -38,7 +38,28 @@ router.get("/inventory", function(req, res){
 
 router.get("/new", function(req, res){
     res.render("sneakers/new");
+});
+
+// ROUTE for SHOW PAGE BY SNEAKER ID
+
+router.get("/:id", function(req, res){
+    db.Sneaker.findById(req.params.id, function(err, foundSneaker){
+        if (err) return res.send(err);
+
+        const context = { Sneaker: foundSneaker };
+        return res.render("sneakers/show", context);
+    })
 })
 
+//Create Route
+//MIGHT NEED TO CHANGE ROUTE HERE
+
+router.post("/inventory", function(req, res){
+    db.Sneaker.create(req.body, function(err, createdSneaker){
+        if (err) return res.send(err);
+
+        return res.redirect("/inventory");
+    });
+});
 
 module.exports = router;

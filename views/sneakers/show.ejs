@@ -8,12 +8,26 @@
 </head>
 <body>
     <div>
-        <button><a href="sneakers/new">Add Sneaker</a></button>
+        <button><a href="/new">Add Sneaker</a></button>
         <button><a href="/search">Search Inventory</a></button>
         <button><a href="/">Home</a></h3></button>
         
     </div>
 
+<main>
+    <section>
+        <h2>Sneaker INFO</h2>
+        <a href="/sneakers/<%= sneaker._id %>/edit">Edit</a>
+        <ul>
+            <li>Style: <%= sneaker.style %></li>
+            <li>Size: <%= sneaker.size %></li>
+            <li>Condition: <%= sneaker.condition %></li>
+        </ul>
+    </section>
+    <form action="/sneakers/<%= sneaker._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete"/>
+    </form>
+</main>
 
 
 </body>
