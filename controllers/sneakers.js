@@ -92,5 +92,14 @@ router.put("/sneakers/:id", function(req, res){
     );
 });
 
+//DELETE ROUTE
+
+router.delete("/sneakers/:id", function(req, res){
+    db.Sneaker.findByIdAndDelete(req.params.id, function(err, deletedSneaker){
+        if (err) return res.send(err);
+
+        return res.redirect("/inventory/");
+    });
+});
 
 module.exports = router;
