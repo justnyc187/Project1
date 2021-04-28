@@ -13,7 +13,7 @@ const db = require("./models");
 // *** INTERNAL MODULES *** \\
 const controllers = require("./controllers");
 
-const { Router } = require("express");
+
 
 
 
@@ -75,15 +75,18 @@ const authRequired = function(req,res,next){
 
 
 app.get("/", function (req, res){
-    res.render("./home");
+    res.render("home");
 
 });
 
 // CONTROLLERS ROUTE
 
-app.use("/", controllers.sneakers);
+// authentication and authorization
+app.use("/", controllers.auth);
 
-app.use("/users",authRequired, controllers.users);
+app.use("/sneakers", authRequired, controllers.sneakers);
+
+app.use("/users", authRequired, controllers.users);
 
 
 // *** ROUTES/CONTROLLERS ** \\
