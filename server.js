@@ -10,6 +10,7 @@ const db = require("./models");
 const controllers = require("./controllers");
 
 
+
 // *** INSTANCED MODULES *** \\
 const app = express();
 
@@ -22,6 +23,8 @@ app.set("view engine", "ejs");
 // *** MIDDLEWARE ** \\
 // body data middleware
 app.use(express.urlencoded({ extended: true}));
+
+app.use(express.static(__dirname + "/public"));
 
 // method override middleware
 app.use(methodOverride("_method"));
