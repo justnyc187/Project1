@@ -26,4 +26,5 @@ mongoose.connection.on("disconnected", function(){
 
 module.exports = {
     Sneaker: require("./Sneaker"),
+    User: require("./User"),
 };
