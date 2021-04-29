@@ -5,33 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    
     <title>WOAT APP</title>
 </head>
 <body>
 
+<div class="container">
 
-
-    <h1>WELCOME TO WOAT APP!</h1>
-
-    <button><a href="/">Home</a></h3></button>
-    <button><a href="/sneakers/inventory">Inventory</a></button>
+<div class="left-nav">
+    <h1>WOAT!</h1> 
+</div>
+    <div class="right-nav">
+        <button><a href="/">Home</a></h3></button>
+        <button><a href="/sneakers/inventory">Inventory</a></button>
+        
     
-   
 
-    <% if (user) { %>
-        <h4><%= user.email %></h4>
-        <form action="/logout?_method=DELETE" method="POST">
-            <input type="submit" value="Logout">
-        </form>
-    <% } else { %>
-        <button><a href="/login">Login</a></button>
-        <button><a href="/register">Register</a></button>
-    <% } %>
-    
-</nav>
+        <% if (user) { %>
+            
+            <form class="logout" action="/logout?_method=DELETE" method="POST">
+                <input class="logout-input" type="submit" value="Logout">
+            </form>
+        <% } else { %>
+            <button><a href="/login">Login</a></button>
+            <button><a href="/register">Register</a></button>
+        <% } %>
+        
+    </div>
 
+</div>
 
-<div class="Video1">
+<div class="video1">
     <video width="1320" height="800" autoplay loop controls>
      <source src="/production ID_5192151.mp4" type="video/mp4"/>
     </video>

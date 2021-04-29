@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <title>Edit Sneaker</title>
 </head>
 <body>
 
-    <div>
+
+    <h1>WOAT!</h1>
+
+    <div class="right-nav">
         <button><a href="/">Home</a></h3></button>
-        <button><a href="sneakers/inventory">Inventory</a></button>
+        <button><a href="/sneakers/inventory">Inventory</a></button>
         <button><a href="/Jordan">Search Inventory</a></button>
         <button><a href="/sneakers/new">Add Sneaker</a></button>
 
@@ -37,6 +44,8 @@
             Condition: <input type="text" name="condition" value="<%= Sneaker.condition %>"/>
         
         </br>
+
+            <input type="text" placeholder="Upload Image" name="image" accept="image/png, image/jpeg">
     
             <input type="submit" value="Update" />
     

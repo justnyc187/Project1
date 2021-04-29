@@ -1,9 +1,71 @@
-/*
-body{
-    background-color: black;
-}
 h1{
+    font-size: 100px;
+    font-family: 'Permanent Marker', cursive;
     color: whitesmoke;
+    text-align: center;
 }
 
-*/
+body{
+    background-color: black;
+    margin: 0;
+}
+
+.right-nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    height: 100px;
+    text-align: center;
+    margin-left: 215px;
+    margin-right: 215px;
+    max-width: 75%;
+    background-color: black;
+}
+button, .logout{
+    border: whitesmoke;
+    background-color: whitesmoke;
+    padding: 50px;
+    padding-top: 10px;
+    
+}
+
+.logout{
+    margin-left: 0;
+}
+a{
+    text-decoration: none;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(52, 66, 73);
+    text-align: center;
+}
+.video1{
+    text-align: center;
+    width: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+li{
+    color: whitesmoke;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+}
+.logout-input{
+    border: none;
+    background-color: whitesmoke;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    color: rgb(52, 66, 73);
+    font-weight: bold;
+
+}
+
+.login-p{
+    text-align: center;
+}
