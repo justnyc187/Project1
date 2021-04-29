@@ -15,9 +15,18 @@
 
     <button><a href="/">Home</a></h3></button>
     <button><a href="/sneakers/inventory">Inventory</a></button>
-    <button><a href="/Jordan">Search Inventory</a></button>
-    <button><a href="/login">Login</a></button>
-    <button><a href="/register">Register</a></button>
+    
+   
+
+    <% if (user) { %>
+        <h4><%= user.email %></h4>
+        <form action="/logout?_method=DELETE" method="POST">
+            <input type="submit" value="Logout">
+        </form>
+    <% } else { %>
+        <button><a href="/login">Login</a></button>
+        <button><a href="/register">Register</a></button>
+    <% } %>
     
 </nav>
 
