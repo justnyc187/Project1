@@ -70,19 +70,19 @@ li{
 
 }
 
-.login-p, .edit-div{
+.login-p, .edit-div, .register-p{
     text-align: center;
     background-color:rgb(109, 130, 141);
     padding: 75px;
     border-radius: 20px;
 }
-.login-div, .edit-div{
+.login-div, .edit-div, .register-div{
     width: 700px;
     margin-top: 100px;
     padding-top: 100px;
     margin-left: 420px;
 }
-.login-btn, .edit-div{
+.login-btn, .edit-div, .update-btn, .register-btn{
     width: 395px;
     padding: 20px;
     font-family: 'Permanent Marker', cursive;
@@ -90,7 +90,7 @@ li{
     border-radius: 10px;
     border-color: whitesmoke;
 }
-.edit-input{
+.edit-input, .register-input{
     border: none;
     background-color: whitesmoke;
     font-family: 'Shadows Into Light', cursive;
@@ -98,4 +98,12 @@ li{
     color: rgb(52, 66, 73);
     font-weight: bold;
     border-radius: 15px;
+}
+.edit-div{
+    margin: auto;
+    padding: 50px 50px 50px 50px;
+    margin-bottom: 70px;
+}
+.update-btn{
+    margin-top: 30px;
 }
