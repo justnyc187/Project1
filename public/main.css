@@ -1,0 +1,163 @@
+h1{
+    font-size: 100px;
+    font-family: 'Permanent Marker', cursive;
+    color: whitesmoke;
+    text-align: center;
+}
+h2{
+    color: black;
+}
+
+body{
+    background-color: black;
+    margin: 0;
+}
+
+.right-nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    height: 100px;
+    text-align: center;
+    margin-left: 215px;
+    margin-right: 215px;
+    max-width: 75%;
+    background-color: black;
+}
+button, .logout{
+    border: whitesmoke;
+    background-color: whitesmoke;
+    padding: 50px;
+    padding-top: 10px;
+    border-radius: 15px;
+    
+}
+
+.logout{
+    margin-left: 0;
+}
+a{
+    text-decoration: none;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(52, 66, 73);
+    text-align: center;
+}
+.video1, .video2, .video3{
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+li{
+    color: whitesmoke;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+}
+.logout-input, .login-input{
+    border: none;
+    background-color: whitesmoke;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    color: rgb(52, 66, 73);
+    font-weight: bold;
+    border-radius: 15px;
+
+}
+
+.login-p, .edit-div, .register-p, .new-div{
+    text-align: center;
+    background-color:rgb(109, 130, 141);
+    padding: 75px;
+    border-radius: 20px;
+}
+.login-div, .edit-div, .register-div, .new-div{
+    width: 700px;
+    margin-top: 100px;
+    padding-top: 100px;
+    margin-left: 420px;
+}
+.login-btn, .edit-div, .update-btn, .register-btn, .new-div, .new-btn, .edit-btn{
+    width: 395px;
+    padding: 20px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    border-radius: 10px;
+    border-color: whitesmoke;
+}
+.edit-input, .register-input, .search-input, .new-input{
+    border: none;
+    background-color: whitesmoke;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    color: rgb(52, 66, 73);
+    font-weight: bold;
+    border-radius: 15px;
+}
+.edit-div, .new-div, .login-div, .register-div{
+    margin: auto;
+    padding: 50px 50px 50px 50px;
+    margin-bottom: 70px;
+}
+.update-btn, .new-btn{
+    margin-top: 30px;
+
+}
+.search-btn{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    border-radius: 10px;
+    border-color: whitesmoke;
+    padding: 30px;
+    padding-bottom: 25px;
+    padding-top: 34px;
+    margin-left: 10px;
+}
+.search-input{
+    padding: 18px;
+    color:rgb(55, 66, 73);
+    font-weight: bold;
+}
+/*.delete-btn{
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    font-size: 20px;
+}
+*/
+.error-msg{
+    color: whitesmoke;
+}
+.sneaker-info, .show-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.show-edit-btn{
+    background-color: whitesmoke;
+    
+}
+.edit-btn{
+    padding-top: 15px;
+    height: 81px;
+    margin-top: 28px;
+    margin-right: 10px;
+    width: 300px;
+}
+#edit-id{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    color: black;
+}
+.update-btn{
+    width: 300px;
+}
+.sneaker-info{
+    margin-bottom: 30px;
+}

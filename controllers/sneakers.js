@@ -19,14 +19,10 @@ const db = require("../models");
  * Delete - DELETE - /authors/:id  - Functional - Deletes author by id from request
  */
 
-router.get("/", function (req, res){
-    res.render("./home");
-
-});
 
 
 router.get("/inventory", function(req, res){
-    db.Sneaker.find({}, function(err, allSneakers){
+    db.Sneaker.find(req.query, function(err, allSneakers){
         if (err) return res.send(err);
         const context = {sneakers: allSneakers};
         return res.render("sneakers/inventory", context);
@@ -42,7 +38,7 @@ router.get("/new", function(req, res){
 
 // ROUTE for SHOW PAGE BY SNEAKER ID
 
-router.get("/sneakers/:id", function(req, res){
+router.get("/:id", function(req, res){
     db.Sneaker.findById(req.params.id, function(err, foundSneaker){
         if (err) return res.send(err);
 
@@ -51,20 +47,20 @@ router.get("/sneakers/:id", function(req, res){
     })
 })
 
-//Create Route
+
 //MIGHT NEED TO CHANGE ROUTE HERE
 
 router.post("/inventory", function(req, res){
     db.Sneaker.create(req.body, function(err, createdSneaker){
         if (err) return res.send(err);
 
-        return res.redirect("/inventory");
+        return res.redirect("/sneakers/inventory");
     });
 });
 
 // EDIT route 
 
-router.get("/sneakers/:id/edit", function(req, res){
+router.get("/:id/edit", function(req, res){
     console.log("EDit routeeeeeeeeee");
     db.Sneaker.findById(req.params.id, function (err, foundSneaker){
         if (err) res.send(err);
@@ -75,7 +71,7 @@ router.get("/sneakers/:id/edit", function(req, res){
 });
 
 // PUT ROUTE
-router.put("/sneakers/:id", function(req, res){
+router.put("/:id", function(req, res){
     console.log("PUUUTTTTT ROUTE")
     db.Sneaker.findByIdAndUpdate(
         req.params.id,
@@ -94,11 +90,11 @@ router.put("/sneakers/:id", function(req, res){
 
 //DELETE ROUTE
 
-router.delete("/sneakers/:id", function(req, res){
+router.delete("/:id", function(req, res){
     db.Sneaker.findByIdAndDelete(req.params.id, function(err, deletedSneaker){
         if (err) return res.send(err);
 
-        return res.redirect("/inventory/");
+        return res.redirect("/sneakers/inventory");
     });
 });
 

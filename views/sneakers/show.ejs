@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WOAT APP</title>
 </head>
 <body>
-    <div>
+
+    <h1>WOAT!</h1>
+
+    <div class="right-nav">
         <button><a href="/">Home</a></h3></button>
-        <button><a href="/inventory/">Inventory</a></button>
-        <button><a href="/Jordan">Search Inventory</a></button>
-        <button><a href="/new">Add Sneaker</a></button>
+        <button><a href="/sneakers/inventory">Inventory</a></button>
+        <button><a href="/sneakers/new">Add Sneaker</a></button>
 
         
     </div>
 
 <main>
     <section>
-        <h2>Sneaker INFO</h2>
+        <h1>Sneaker INFO</h1>
+    <div class="sneaker-info">
+         <img src="<%= Sneaker.image %>" alt="image">
         
         <ul>
             <li>Style: <%= Sneaker.style %></li>
             <li>Size: <%= Sneaker.size %></li>
             <li>Condition: <%= Sneaker.condition %></li>
+
         </ul>
+
+    </div>
+
     </section>
-    <a href="/sneakers/<%= Sneaker._id %>/edit">Edit</a>
+<div class="show-btns">
+  <button class="edit-btn"><a id="edit-id" href="/sneakers/<%= Sneaker._id %>/edit">Edit</a></button>
     
-    <form action="/sneakers/<%= Sneaker._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete"/>
+    <form id="delete-id" action="/sneakers/<%= Sneaker._id %>?_method=DELETE" method="POST">
+        <input class="update-btn" type="submit" value="Delete"/>
     </form>
+</div>
+    <!-- <div class="video2">
+        <video width="1320" height="800" autoplay loop controls>
+            <source src="/Pexels Videos 2085087.mp4" type="video/mp4"/>
+        </video>
+    </div>
+-->
 </main>
 
 

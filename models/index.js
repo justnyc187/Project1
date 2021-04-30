@@ -1,11 +1,15 @@
 // require mongoose
 const mongoose = require("mongoose");
 
+require('dotenv').config();
+
+const dbUrl = process.env.DATABASE_URL;
+
 // connect to mongodb
-const dburl = "mongodb://localhost:27017/snkrdb";
+//const dburl = "mongodb://localhost:27017/snkrdb";
 
 // connect mongoos
-mongoose.connect(dburl, {
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -26,4 +30,5 @@ mongoose.connection.on("disconnected", function(){
 
 module.exports = {
     Sneaker: require("./Sneaker"),
+    User: require("./User"),
 };

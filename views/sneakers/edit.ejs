@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <title>Edit Sneaker</title>
 </head>
 <body>
 
-    <div>
+
+    <h1>WOAT!</h1>
+
+    <div class="right-nav">
         <button><a href="/">Home</a></h3></button>
-        <button><a href="/inventory/">Inventory</a></button>
-        <button><a href="/Jordan">Search Inventory</a></button>
-        <button><a href="/new">Add Sneaker</a></button>
+        <button><a href="/sneakers/inventory">Inventory</a></button>
+        <button><a href="/sneakers/new">Add Sneaker</a></button>
 
         
     </div>
@@ -21,24 +27,26 @@
    <section>
        <h1>Edit <%= Sneaker.style %></h1>
 
-       <div>
+       <div class="edit-div">
 
 
         <form action="/sneakers/<%= Sneaker._id %>?_method=PUT" method="POST">
 
-            Name:  <input type="text" name="style" value="<%= Sneaker.style %>"/>
+            Name:  <input class="edit-input" type="text" name="style" value="<%= Sneaker.style %>"/>
     
         </br>
     
-            Size: <input type="text" name="size" value="<%= Sneaker.size %>"/>
+            Size: <input class="edit-input" type="text" name="size" value="<%= Sneaker.size %>"/>
     
         </br>
     
-            Condition: <input type="text" name="condition" value="<%= Sneaker.condition %>"/>
+            Condition: <input class="edit-input" type="text" name="condition" value="<%= Sneaker.condition %>"/>
         
         </br>
+
+           Image: <input class="edit-input" type="text" placeholder="Upload Image" name="image" accept="image/png, image/jpeg">
     
-            <input type="submit" value="Update" />
+            <input class="update-btn" type="submit" value="Update" />
     
         </form>
     </div>

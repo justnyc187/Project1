@@ -1,3 +1,4 @@
+const { urlencoded } = require("express");
 const mongoose = require("mongoose");
 
 
@@ -7,7 +8,7 @@ const sneakerSchema = new mongoose.Schema ({
     style: { type: String, required: [true, "You must provide a style"]},
     size: { type: Number, required: [true, "You must provide a size"]},
     condition: { type: Number, required: [true, "You must provide a condition"]},
-    image: { type: String}
+    image: { type: String }
 },
     {
         timestamps: true,

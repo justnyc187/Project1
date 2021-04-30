@@ -4,34 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <title>WOAT APP</title>
 </head>
 
 <body>
-    <div>
+
+    <h1>WOAT!</h1>
+
+    <div class="right-nav">
         <button><a href="/">Home</a></h3></button>
-        <button><a href="/inventory/">Inventory</a></button>
-        <button><a href="/Jordan">Search Inventory</a></button>
+        <button><a href="/sneakers/inventory">Inventory</a></button>
+        <button><a href="/sneakers/inventory">Search Inventory</a></button>
         
     </div>
 
+    <h1>Add New Sneaker</h1>
 
-
-    <div>
-        <form action="/inventory" method="POST">
+    <div class="new-div">
+        <form action="./inventory" method="POST">
         
-        <input required type="text" name="style" placeholder="Style">
-        <input required type="text" name="size" placeholder="Size">
-        <input required type="text" name="condition" placeholder="Condition">
+        Style: <input class="new-input" required type="text" name="style" placeholder="Style">
+        Size: <input class="new-input" required type="text" name="size" placeholder="Size">
+       Condition:  <input class="new-input" required type="text" name="condition" placeholder="Condition">
+       Image: <input class="new-input" type="text" placeholder="Upload Image" name="image" accept="image/png, image/jpeg">
         
-    
-    
-    
-        <input type="submit" value="Add Stock">
-    
+        <input class="new-btn" type="submit" value="Add Stock">
+        
         </form>
     </div>
-
-
+    <!--<div class="video3">
+        <video width="1320" height="800" autoplay loop controls>
+            <source src="/pexels-tima-miroshnichenko-5586521.mp4" type="video/mp4"/>
+        </video>
+    </div>
+-->
 </body>
 </html>
