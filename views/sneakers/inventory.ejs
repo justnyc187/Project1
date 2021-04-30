@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
     <title>WOAT APP!!</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
     
 
     <% if(!sneakers.length) { %>
-    <p>There are no sneakers in your inventory yet.</p>
+    <p class="error-msg">There are no sneakers in your inventory yet.</p>
     <% } %>
     <ul>
         <% sneakers.forEach(sneaker => { %>
