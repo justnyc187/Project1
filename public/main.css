@@ -100,7 +100,7 @@ li{
     font-weight: bold;
     border-radius: 15px;
 }
-.edit-div, .new-div{
+.edit-div, .new-div, .login-div{
     margin: auto;
     padding: 50px 50px 50px 50px;
     margin-bottom: 70px;

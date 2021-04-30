@@ -38,7 +38,7 @@
     <ul>
         <% sneakers.forEach(sneaker => { %>
         <li>
-            <a href="/sneakers/<%= sneaker._id %>"> <%= sneaker.style %></a>
+            <a href="/sneakers/<%= sneaker._id %>"> <%= sneaker.style %> - Size: <%= sneaker.size %></a>
         </li>
         <% }) %>
     </ul>
