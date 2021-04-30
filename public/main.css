@@ -84,7 +84,7 @@ li{
     padding-top: 100px;
     margin-left: 420px;
 }
-.login-btn, .edit-div, .update-btn, .register-btn, .new-div, .new-btn{
+.login-btn, .edit-div, .update-btn, .register-btn, .new-div, .new-btn, .edit-btn{
     width: 395px;
     padding: 20px;
     font-family: 'Permanent Marker', cursive;
@@ -125,11 +125,39 @@ li{
     color:rgb(55, 66, 73);
     font-weight: bold;
 }
-.delete-btn{
+/*.delete-btn{
     font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
     font-size: 20px;
 }
+*/
 .error-msg{
     color: whitesmoke;
+}
+.sneaker-info, .show-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.show-edit-btn{
+    background-color: whitesmoke;
+    
+}
+.edit-btn{
+    padding-top: 15px;
+    height: 81px;
+    margin-top: 28px;
+    margin-right: 10px;
+    width: 300px;
+}
+#edit-id{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    color: black;
+}
+.update-btn{
+    width: 300px;
+}
+.sneaker-info{
+    margin-bottom: 30px;
 }

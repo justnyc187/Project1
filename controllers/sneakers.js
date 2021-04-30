@@ -22,7 +22,7 @@ const db = require("../models");
 
 
 router.get("/inventory", function(req, res){
-    db.Sneaker.find({}, function(err, allSneakers){
+    db.Sneaker.find(req.query, function(err, allSneakers){
         if (err) return res.send(err);
         const context = {sneakers: allSneakers};
         return res.render("sneakers/inventory", context);

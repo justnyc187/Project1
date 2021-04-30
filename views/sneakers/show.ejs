@@ -24,8 +24,8 @@
 
 <main>
     <section>
-        <h2>Sneaker INFO</h2>
-
+        <h1>Sneaker INFO</h1>
+    <div class="sneaker-info">
          <img src="<%= Sneaker.image %>" alt="image">
         
         <ul>
@@ -34,17 +34,23 @@
             <li>Condition: <%= Sneaker.condition %></li>
 
         </ul>
+
+    </div>
+
     </section>
-    <a href="/sneakers/<%= Sneaker._id %>/edit">Edit</a>
+<div class="show-btns">
+  <button class="edit-btn"><a id="edit-id" href="/sneakers/<%= Sneaker._id %>/edit">Edit</a></button>
     
-    <form action="/sneakers/<%= Sneaker._id %>?_method=DELETE" method="POST">
-        <input class="delete-btn" type="submit" value="Delete"/>
+    <form id="delete-id" action="/sneakers/<%= Sneaker._id %>?_method=DELETE" method="POST">
+        <input class="update-btn" type="submit" value="Delete"/>
     </form>
-    <div class="video2">
+</div>
+    <!-- <div class="video2">
         <video width="1320" height="800" autoplay loop controls>
             <source src="/Pexels Videos 2085087.mp4" type="video/mp4"/>
         </video>
     </div>
+-->
 </main>
 
 
