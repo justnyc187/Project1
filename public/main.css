@@ -162,16 +162,19 @@ li{
     margin-bottom: 30px;
 }
 .splide{
-    
     height: 600px;
     margin: auto;
+    padding-top: 20px;
 }
 .show-img{
     width:600px;
-    height: 600px;
+    height: 500px;
     object-fit: cover;
 }
 .splide__slide{
     margin-right: 0;
+}
+.splide-track{
+
 }
 
