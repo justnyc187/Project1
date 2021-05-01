@@ -1,7 +1,7 @@
 h1{
     font-size: 100px;
     font-family: 'Permanent Marker', cursive;
-    color: whitesmoke;
+    color: rgb(158, 242, 204);
     text-align: center;
 }
 h2{
@@ -132,7 +132,11 @@ li{
 }
 */
 .error-msg{
-    color: whitesmoke;
+    font-size: 50px;
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(158, 242, 204);
+    text-align: center;
+    padding-top: 50px;
 }
 .sneaker-info, .show-btns{
     display: flex;
@@ -174,7 +178,5 @@ li{
 .splide__slide{
     margin-right: 0;
 }
-.splide-track{
 
-}
 
