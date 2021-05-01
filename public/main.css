@@ -161,3 +161,17 @@ li{
 .sneaker-info{
     margin-bottom: 30px;
 }
+.splide{
+    
+    height: 600px;
+    margin: auto;
+}
+.show-img{
+    width:600px;
+    height: 600px;
+    object-fit: cover;
+}
+.splide__slide{
+    margin-right: 0;
+}
+
